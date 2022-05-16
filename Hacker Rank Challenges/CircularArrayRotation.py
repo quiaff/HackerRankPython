@@ -64,16 +64,15 @@ Sample Output 0
 #  2. INTEGER k
 #  3. INTEGER_ARRAY queries
 
-from typing import final
 
 
-def circularArrayRotation(a, k,q):
+def circularArrayRotation(a, k,queries):
     final_array=[]   
     for i in range (k):
         last_element=a.pop()
         a.insert(0,last_element)
-    for i in q:
-        final_array.append (a[i])l
+    for i in queries:
+        final_array.append (a[i])
     return final_array
 
 print (circularArrayRotation([1,2,3],2,[1,2]))
