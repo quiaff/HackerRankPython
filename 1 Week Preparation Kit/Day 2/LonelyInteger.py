@@ -23,20 +23,17 @@ The second line contains  space-separated integers that describe the values in .
 
 """
 
-from numpy import number
-
-
 h=[1,2,3,4,4,3,2,1,0]
 def lonelyinteger(a):
-    for lonlynumber in a:
+    for lonelyNumber in a:
         temporalArray=a.copy()
-        temporalArray.remove(lonlynumber)
-        if lonlynumber not in temporalArray:
-            return lonlynumber
+        temporalArray.remove(lonelyNumber)
+        if lonelyNumber not in temporalArray:
+            return lonelyNumber
             
 
 
-print (lonelyinteger(h))
+print(lonelyinteger(h))
 
 
 
