@@ -30,21 +30,17 @@ For each test cases, print the elements of the transformed zig zag sequence in a
 
 """
 
-
-
-
-
 def findZigZagSequence(a, n):
     a.sort()
     mid = int((n + 1)/2)
-    a[mid], a[n-1] = a[n-1], a[mid]
+    a[mid-1], a[n-1] = a[n-1], a[mid-1]
 
-    st = mid + 1
-    ed = n - 1
+    st = mid
+    ed = n - 2
     while(st <= ed):
         a[st], a[ed] = a[ed], a[st]
         st = st + 1
-        ed = ed + 1
+        ed = ed - 1
 
     for i in range (n):
         if i == n-1:
@@ -52,3 +48,8 @@ def findZigZagSequence(a, n):
         else:
             print(a[i], end = ' ')
     return
+
+findZigZagSequence([1,2,3,4,5,6,7],7)
+
+    
+    

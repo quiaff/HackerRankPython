@@ -26,15 +26,14 @@ The second line contains  space-separated integers that describe the values in .
 from numpy import number
 
 
-h=[1,2,3,4,3,2,1]
+h=[1,2,3,4,4,3,2,1,0]
 def lonelyinteger(a):
     for lonlynumber in a:
         temporalArray=a.copy()
         temporalArray.remove(lonlynumber)
-        if lonlynumber in temporalArray:
-            continue
-        else:
+        if lonlynumber not in temporalArray:
             return lonlynumber
+            
 
 
 print (lonelyinteger(h))
